@@ -2,8 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: second-app-deployment
+  labels:
+    group: example
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: second-app
@@ -16,6 +18,6 @@ spec:
     spec: 
       containers:
         - name: second-node
-          image: ricardoferrari/kub-app-example:0.4
+          image: ricardoferrari/kub-app-example:0.6
         # - name: ...
         #   image: ...

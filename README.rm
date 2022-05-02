@@ -49,3 +49,6 @@ $ kubectl set image deployment/first-app kub-app-example=ricardoferrari/kub-app-
 Forma declarativa:
 $ kubectl apply -f deployment.yaml
 $ kubectl apply -f service.yaml
+
+Para deletar utilizando labels de grupos:
+$ kubectl delete -l group=example
